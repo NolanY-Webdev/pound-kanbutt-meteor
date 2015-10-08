@@ -1,9 +1,9 @@
 Router.configure({
-  layoutTemplate : 'dashboardLayout'
+  layoutTemplate : 'login'
 });
 
 Router.route('/', function() {
-  this.render();
+  this.render('login');
 });
 
 Router.route('/name', function() {
