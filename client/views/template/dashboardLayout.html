@@ -1,3 +1,20 @@
+<head>
+  <title>KANBUTT</title>
+</head>
+
+
+<body>
+  <div id="userLayout">
+    <!-- insert login -->
+    {{> loginButtons}}
+
+    <!-- placeholder -->
+    {{> yield}}
+  </div>
+
+</body>
+
+
 <template name="dashboardLayout">
   <h1>Welcome</h1>
   {{ > yield }}
@@ -6,4 +23,5 @@
 <!-- userLayout from login.html -->
 <template name="userLayout">
   <h1>User: {{userName}}</h1>
+
 </template>
