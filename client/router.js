@@ -3,16 +3,9 @@ Router.configure({
 });
 
 Router.route('/', function() {
-
-  this.render('userLayout');
+  this.render();
 });
 
-Router.route('/name/:name', function() {
-  this.render('userName', {
-    data : function() {
-      return {
-        userName : this.params.name
-      }
-    }
-  });
+Router.route('/name', function() {
+  this.render();
 });
