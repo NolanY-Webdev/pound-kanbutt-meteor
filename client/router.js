@@ -3,9 +3,9 @@ Router.configure({
 });
 
 Router.route('/', function() {
-  this.render('login');
+  this.render('login', { path : '/' });
 });
 
-Router.route('/name', function() {
-  this.render();
+Router.route('/dashboard', function() {
+  this.render('dashboard', { path : '/dashboard' });
 });
