@@ -1,29 +1,12 @@
 <template name='dashboard'>
   <h1>DASHBOARD YO</h1>
   {{> loginButtons}}
-  {{> todos}}
+  <!-- {{> todos}} -->
 </template>
 
 
-<!-- shits and giggles 9:38am Thursday -->
-<!-- <template name="todos">
-  <ul>
-  {{#each todo}}
-    <li>{{name}}</li>
-  {{/each}}
-  </ul>
-</template> -->
-
-<!-- <template name="addTodo">
-  <form>
-    New Task:
-    <input type='text' placeholder='wats yer task?' name='todoName'>
-  </form>
-</template> -->
-
-
 <!-- Tasks -->
-<template name="todos">
+<!-- <template name="todos">
     {{> addTodo}}
     <ul>
     {{#each getAllTodoItems}}
@@ -40,13 +23,13 @@
         <input type="text" placeholder="Wat u describin?" name="todoDescription">
         <button id="submit">SAVE</button>
     </form>
-</template>
+</template> -->
 
-<template name="todoItem">
+<!-- <template name="todoItem">
   <li>
     <p>Task Name: {{name}}</p>
     <p>Description: {{description}}</p>
     [<a href='#' class='delete-todo'>Delete</a>]
   </li>
-</template>
+</template> -->
 

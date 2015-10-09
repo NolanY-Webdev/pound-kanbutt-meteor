@@ -1,16 +1,63 @@
-<head>
-  <title>KANBUTT</title>
-</head>
 
-<!-- shits and giggles 9:38am Thursday -->
-<body>
-</body>
-
-
-
-<template name="login">
+<template name="dashboardLayout">
   <h1>Welcome</h1>
-  {{> loginButtons}}
+    {{> addTodo}}
+  {{> statusTable}}
+</template>
+
+<template name="todos">
+    <ul>
+    {{#each getAllAssignedItems}}
+        {{> todoItem}}
+    {{/each}}
+    </ul>
+</template>
+
+<template name="todosinprog">
+    <ul>
+    {{#each getAllTodoItems}}
+        {{> todoItem}}
+    {{/each}}
+    </ul>
+</template>
+
+<template name="todosdone">
+    <ul>
+    {{#each getAllDoneItems}}
+        {{> todoItem}}
+    {{/each}}
+    </ul>
 </template>
 
 
+<template name="addTodo">
+    <form>
+        Create a task:
+        <input type="text" placeholder="Wat u want?" name="todoName">
+        <input type="text" placeholder="Wat u describin?" name="todoDescription">
+        <button id="submit">SAVE</button>
+    </form>
+</template>
+
+<template name="todoItem">
+  <li>
+    <p>Task Name: {{name}}</p>
+    <p>Description: {{description}}</p>
+    [<a href='#' class='delete-todo'>Delete</a>]
+  </li>
+</template>
+
+<template name="statusTable">
+  <table id="status" style="width:100%">
+    <tr>
+      <th>New Tasks</th>
+      <th>In Progress</th>
+      <th>Done</th>
+    </tr>
+    <tr>
+      <td>{{> todos}}</td>
+      <td>{{> todosinprog}}</td>
+      <td>{{> todosdone}}</td>
+    </tr>
+  </table>
+</template>

@@ -1,7 +1,12 @@
   Template.todos.helpers({
+    getAllAssignedItems : function() {
+      return Items.find({progress: 1}).fetch();
+    },
     getAllTodoItems : function() {
-      return Items.find().fetch();
-      // {}, { sort : { createdAt : -1 } }
+      return Items.find({progress: 2}).fetch();
+    },
+    getAllDoneItems : function() {
+      return Items.find({progress: 3}).fetch();
     }
   });
 
@@ -15,7 +20,9 @@
         name : todoName,
         description : todoDescription,
         completed : false,
-        createdAt : new Date()
+        createdAt : new Date(),
+        progress : 1
+
       });
       $('[name="todoName"]').val('');
       $('[name="todoDescription"]').val('');
@@ -25,8 +32,8 @@
     }
   });
 
-  function getDaItems() {
-    var collection = Items.find().fetch();
+  function getDaItems(prog) {
+    var collection = Items.find({progress: prog}).fetch();
     console.log(collection);
     return collection;
   }
