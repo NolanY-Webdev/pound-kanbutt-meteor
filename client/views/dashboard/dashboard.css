@@ -1,0 +1,13 @@
+#status {
+  border:2px solid black;
+}
+
+th{
+  border:2px solid black;
+  width:30%;
+}
+
+td{
+  border:2px solid black;
+  width:30%;
+}
