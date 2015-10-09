@@ -1,11 +1,10 @@
 Router.configure({
-  layoutTemplate : 'login'
+  layoutTemplate : 'main'
 });
 
-Router.route('/', function() {
-  this.render('login');
-});
-
-Router.route('/name', function() {
-  this.render();
-});
+Router.map(function() {
+  this.route('login', {path:'/'});
+  this.route('dashboard', {path:'/dashboard'});
+  this.route('profile/edit', {path:'/profile/edit'});
+  this.route('tasks/new'), {path:'/tasks/new'}
+})
