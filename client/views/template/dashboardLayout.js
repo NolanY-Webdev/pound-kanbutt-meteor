@@ -1,3 +1,9 @@
+  Template.todos.helpers({
+    'todo' : function() {
+      return Items.find( {}, { sort : { createdAt : -1 } });
+    }
+  });
+
   Template.addTodo.events({
     'submit form' : function(event) {
       console.log('submitted');
