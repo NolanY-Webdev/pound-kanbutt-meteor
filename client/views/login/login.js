@@ -1,13 +1,7 @@
-console.log('js working')
-
-
-
 
 Tracker.autorun(function() {
+  console.log('stillworkin');
   if (Meteor.user() !== null) {
     Router.go('/dashboard');
-  }
-  if (Meteor.user() === null) {
-    Router.go('/');
-  }
+  };
 });
