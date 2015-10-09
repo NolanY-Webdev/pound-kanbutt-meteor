@@ -9,6 +9,24 @@ Template.login.events({
   }
 })
 
+<<<<<<< HEAD
+
+
+
+// Todos.insert({
+//   title: "Something",
+//   description : "Something else",
+//   creator : "Someone",
+//   completed : false
+// });
+
+// //return documents from Todos collection above
+// Template.todos.helpers({
+//   'todo': function() {
+//     return Todos.find();
+//   }
+// })
+=======
 Tracker.autorun(function(){
   if(Meteor.user()){
     console.log('HALP')
@@ -18,3 +36,4 @@ Tracker.autorun(function(){
     // logout handler
   }
 });
+>>>>>>> SkinnyFatMan_branch
