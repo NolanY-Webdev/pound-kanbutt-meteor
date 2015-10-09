@@ -5,3 +5,20 @@ Template.login.events({
     console.log('MIKE HALP');
   }
 })
+
+
+
+
+// Todos.insert({
+//   title: "Something",
+//   description : "Something else",
+//   creator : "Someone",
+//   completed : false
+// });
+
+// //return documents from Todos collection above
+// Template.todos.helpers({
+//   'todo': function() {
+//     return Todos.find();
+//   }
+// })

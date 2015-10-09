@@ -2,9 +2,61 @@
   <title>KANBUTT</title>
 </head>
 
+<!-- shits and giggles 9:38am Thursday -->
+<body>
+  {{> todos}}
+</body>
+
+
+
 <template name="login">
   <h1>Welcome</h1>
   {{> loginButtons}}
 </template>
 
+
+<!-- shits and giggles 9:38am Thursday -->
+<!-- <template name="todos">
+  <ul>
+  {{#each todo}}
+    <li>{{name}}</li>
+  {{/each}}
+  </ul>
+</template> -->
+
+<!-- <template name="addTodo">
+  <form>
+    New Task:
+    <input type='text' placeholder='wats yer task?' name='todoName'>
+  </form>
+</template> -->
+
+
+<!-- Tasks -->
+<template name="todos">
+    {{> addTodo}}
+    <ul>
+    {{#each todo}}
+        {{> todoItem}}
+    {{/each}}
+    </ul>
+</template>
+
+
+<template name="addTodo">
+    <form>
+        Create a task:
+        <input type="text" placeholder="Wat u want?" name="todoName">
+        <input type="text" placeholder="Wat u describin?" name="todoDescription">
+        <button id="submit">SAVE</button>
+    </form>
+</template>
+
+<template name="todoItem">
+  <li>
+    <p>Task Name: {{name}}</p>
+    <p>Description: {{description}}</p>
+    [<a href='#' class='delete-todo'>Delete</a>]
+  </li>
+</template>
 
