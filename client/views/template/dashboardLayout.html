@@ -2,7 +2,8 @@
 <template name="dashboardLayout">
   <h1>Welcome</h1>
     {{> addTodo}}
-  {{> statusTable}}
+    {{> statusTable}}
+    {{> button}}
 </template>
 
 <template name="todos">
@@ -33,8 +34,8 @@
 <template name="addTodo">
     <form>
         Create a task:
-        <input type="text" placeholder="Wat u want?" name="todoName">
-        <input type="text" placeholder="Wat u describin?" name="todoDescription">
+        <input type="text" placeholder="Enter task name" name="todoName">
+        <input type="text" placeholder="Enter description" name="todoDescription">
         <button id="submit">SAVE</button>
     </form>
 </template>
@@ -61,4 +62,8 @@
       <td>{{> todosdone}}</td>
     </tr>
   </table>
+</template>
+
+<template name="button">
+  <button class="doNotPush">Do Not Push</button>
 </template>

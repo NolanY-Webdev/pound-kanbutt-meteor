@@ -26,7 +26,7 @@ Template.addTodo.events({
       name : todoName,
       description : todoDescription,
       completed : false,
-      createdAt : new Date(),
+      // createdAt : new Date(),
       progress : 1
 
     });
@@ -38,11 +38,11 @@ Template.addTodo.events({
   }
 });
 
-function getDaItems(prog) {
-  var collection = Items.find({progress: prog}).fetch();
-  console.log(collection);
-  return collection;
-}
+// function getDaItems(prog) {
+//   var collection = Items.find({progress: prog}).fetch();
+//   console.log(collection);
+//   return collection;
+// }
 
 
 Template.todoItem.events({
@@ -62,3 +62,11 @@ Template.todoItem.events({
     Items.update({ _id : documentId }, { $set : { progress : todoprogress } } );
   }
 });
+
+Template.button.events({
+  'click .doNotPush' : function() {
+    event.preventDefault();
+    document.body.background = "http://www.impactwrestling.com/images/stories/roster/awesomekong/Awesome_Kong_9268.jpg"
+    document.body.innerHTML = "YOU WERE WARNED";
+  }
+})
