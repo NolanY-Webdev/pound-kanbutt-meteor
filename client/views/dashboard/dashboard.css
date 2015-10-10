@@ -5,11 +5,20 @@
 th{
   border:2px solid black;
   width:30%;
+  padding: 10px;
+  font-size: 25px;
+  font-family: "Helvetica";
+  font-weight: bold;
+  box-shadow: 0 1px 0 #666, 0 1px 0 #444, 0 0px 0px 2px rgba(0,0,0,0.6);
+  background-color: grey;
+  color: blue;
+
 }
 
 td{
   /*border:2px solid black;*/
   width:30%;
+
 }
 
 .doNotPush {
@@ -18,7 +27,7 @@ td{
   border-radius: 50px;
   display: block;
   text-align: center;
-  box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+  box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 4px 6px 6px rgba(0,0,0,0.6);
   margin: auto;
 }
 
@@ -36,10 +45,11 @@ li {
   margin: 20px;
   background-color: yellow;
   list-style-type: none;
-  box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0,0,0,0.6);
+  box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px 6px rgba(0,0,0,0.6);
+
 }
 
-.delete-todo {
+.progress-todo {
   float: right;
 }
 
@@ -78,4 +88,14 @@ form p {
                0 5px 10px rgba(0,0,0,.25),
                0 10px 10px rgba(0,0,0,.2),
                0 20px 20px rgba(0,0,0,.15);
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+table {
+  background-color: #A0A0A0;
+;
 }
