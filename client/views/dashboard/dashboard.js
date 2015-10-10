@@ -77,6 +77,7 @@ Template.login.events({
     var emailVar = event.target.loginEmail.value;
     var passwordVar = event.target.loginPassword.value;
     Meteor.loginWithPassword(emailVar, passwordVar);
+    Router.go('/dashboardlayout');
   }
 });
 
@@ -96,5 +97,13 @@ Template.dashboard.events({
   'click .logout': function(event){
     event.preventDefault();
     Meteor.logout();
+  }
+});
+
+Template.dashboardLayout.events({
+  'click .logout': function(event){
+    event.preventDefault();
+    Meteor.logout();
+    Router.go('/');
   }
 });
