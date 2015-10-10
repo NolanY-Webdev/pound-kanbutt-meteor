@@ -1,7 +1,12 @@
 <template name='dashboard'>
   <h1>DASHBOARD YO</h1>
-  {{> loginButtons}}
-  <!-- {{> todos}} -->
+   {{#if currentUser}}
+        <p>You're logged in.</p>
+        <p><a href="#" class="logout">Logout</a></p>
+    {{else}}
+        {{> register}}
+        {{> login}}
+    {{/if}}
 </template>
 
 
